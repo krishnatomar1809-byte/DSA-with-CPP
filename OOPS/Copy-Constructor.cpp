@@ -13,11 +13,18 @@ class Car{
         this->color=color;
 
     };
+
+
+    Car (Car &original){
+        cout<<"copy original to new \n";
+        name=original.name;
+        color=original.color;
+    }
 };    
 
 int main(){
     Car c1("MAruti800", "white");
-    Car c2(c1);
+    Car c2(c1);   //custom call
 
     cout<<c2.name<<endl;
     cout<<c2.color<<endl;
